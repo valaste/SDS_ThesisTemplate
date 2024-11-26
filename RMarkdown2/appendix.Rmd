@@ -1,0 +1,18 @@
+---
+title: " "
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{sectsty}
+---
+
+# Appendix {-#appendix}
+
+## Appendix: something {-}
+
+\newpage
+
+## Appendix: Codes {-}
+
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```
