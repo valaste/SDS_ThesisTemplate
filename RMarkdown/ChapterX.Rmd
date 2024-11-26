@@ -1,0 +1,51 @@
+---
+title: " "
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{sectsty}
+---
+
+# Chapter X
+
+
+## Some text 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \citep{rao_making_2020, beaumont_jean-francois_ask_2021}. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \citet{sarndal_model_1992} ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa \citet{sakshaug_sequential_2019, schork_survey_2021, bethlehem_article_2009} qui officia deserunt mollit anim id est laborum. See BibTeX hints: <https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Text with equations
+
+An example of Model-assisted strategy for $p(s)=SRSWOR$ is presented next. Our model is defined for sample element $k \in s$ as
+\begin{equation}
+ y_k = \beta_0 + \beta_1 x_k + \varepsilon_k,
+\end{equation}
+where $k = 1, \ldots, n$ and $n$ denotes sample size. 
+Regression estimator for population total $t$ of $y$ is
+
+\begin{equation}
+\hat{\theta}^* = \hat{t}_{REG} = \hat{t} + \hat{\beta}_1(t_x - \hat{t}_x),
+\label{eq:RegresionEstimator}
+\end{equation} 
+where $t_x$ is known population total of auxiliary $x$-variable, $\hat{t}$ and $\hat{t}_x$ are SRS estimators of $t$ and $t_x$, respectively and $\hat{\beta}_1$ is estimated regression slope coefficient \citep{sarndal_model_1992}. The estimator of design variance of regression estimator is 
+\begin{equation}
+\hat{v}(\hat{t}_{REG}) = \hat{v}_{SRS}(\hat{t})(1 - \hat{\rho}^{2}_{yx}),
+\end{equation}
+where $\hat{v}_{SRS}(\hat{t})$ is SRS variance estimator of $\hat{t}$ and $\hat{\rho}_{yx}$ is sample correlation of $y$ and $x$. In this strategy the auxiliary $x$-data are incorporated in the estimation procedure by a linear regression model.
+
+Making a cross reference to the equations (and sections, figures, etc.), for example to the previous regression estimator, is easy. Define a label inside of the equation environment (e.g. use \verb|\label|  and give some label name, in our example the name is \verb|eq:RegresionEstimator|) and then call it using \verb|\ref| command. In this case our reference to the regression estimator equation is (\ref{eq:RegresionEstimator}).
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

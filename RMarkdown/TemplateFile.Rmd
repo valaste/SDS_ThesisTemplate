@@ -1,0 +1,194 @@
+---
+title: ' '
+output:
+  pdf_document:
+    number_sections: yes
+    keep_tex: yes
+classoption: a4paper
+geometry: left = 2.5cm, right = 2cm, top = 2cm, bottom = 2cm
+fontsize: 12pt
+header-includes:
+- \usepackage{float}
+- \usepackage{sectsty}
+- \usepackage{paralist}
+- \usepackage[onehalfspacing]{setspace}
+- \usepackage{fancyhdr}
+- \usepackage{lastpage}
+- \usepackage{dcolumn}
+- \usepackage{natbib}\bibliographystyle{chicago}
+- \usepackage[nottoc]{tocbibind}
+bibliography: MyReferences.bib
+---
+
+<!-- 
+TemplateFile.tex version 0.20 (10/2024), Maria Valaste
+Files: 
+  - TemplateFile.Rmd - the master document
+  - introduction.Rmd, chapterX.Rmd, chapterY.Rmd, chapterZ.Rmd, conclusions.Rmd, references.Rmd, appendix.Rmd - child files
+  - MyReferences.bib - bibliography file e.g. from Zotero
+  	subdirectory 'figures' including files: 
+	  - HY__TJ23_valtiL_EN_V1__CMYK.pdf
+    - some additional logo files
+
+	  
+* * * * * * * * * *
+
+Note. Instructions "Accessibility of theses written using LaTeX" from page 
+https://studies.helsinki.fi/instructions/article/digital-accessibility-what-all-students-should-know?check_logged_in=1#paragraph-7779
+	 
+
+-->
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+<!-- change Bibliograpy->References -->
+\renewcommand\bibname{References} 
+
+
+<!-- Here begins the title page. -->
+\allsectionsfont{\centering}
+\subsectionfont{\raggedright}
+\subsubsectionfont{\raggedright}
+
+\pagenumbering{gobble}
+
+
+\vspace{3cm}
+
+```{r uni_logo, echo=F, out.width="20%", fig.align = 'left'}
+knitr::include_graphics("figures/HY__TJ23_valtiL_EN_V1__CMYK.pdf")
+``` 
+
+\vspace{5cm}
+
+\begin{center}
+{\LARGE \bf Title of your thesis }
+\end{center}
+
+\vspace{12cm}
+
+\begin{flushright}
+\singlespacing
+\begin{tabular}{l}
+{FirstName LastName} \\
+{Master's Programme in Contemporary Societies} \\
+{Faculty of Social Sciences} \\
+{University of Helsinki} \\
+{Master's Thesis} \\
+{Month Year}
+\end{tabular}
+\end{flushright}
+
+
+<!-- Here ends the title page. -->
+
+
+\newpage
+
+<!-- Here begins the abstract. -->
+
+\pagenumbering{gobble}
+
+\begin{centering}
+
+{\bf Abstract}
+
+\end{centering}
+
+\spacing{1.0} 
+
+\textbf{Faculty}: Your faculty
+
+\textbf{Degree programme}: Your degree programme
+
+\textbf{Study track}: Your study track
+
+\textbf{Author}: Your name
+
+\textbf{Title}: Thesis title
+
+\textbf{Level}: Level of thesis, e.g. Master’s thesis
+
+\textbf{Month and year}: Month and year
+
+\textbf{Number of pages}: The number of pages of the thesis and the appendices separately
+
+\textbf{Keywords}: keyword, keyword, keyword
+
+\textbf{Supervisor or supervisors}: Name of supervisor/supervisors
+
+\textbf{Where deposited}: Place where the thesis is deposited, e.g. for a Master’s thesis the Helsinki University Library
+
+\textbf{Additional information}: Additional information if applicable
+
+\textbf{Abstract}: Write your thesis abstract here. Please check your degree programme’s instructions for the abstract.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+\pagenumbering{roman}
+
+\newpage
+
+<!-- Table of contents. -->
+\centering
+\raggedright
+\newpage
+\tableofcontents
+
+\newpage
+
+\spacing{1.5} 
+
+<!-- Here begins the text chapters. Note that all of the chapters are in their own Rmd-files. -->
+
+```{r intro, child = 'introduction.Rmd'}
+```
+\pagenumbering{arabic}
+
+
+\newpage
+
+```{r chapterX, child = 'chapterX.Rmd'}
+```
+
+\newpage
+
+```{r chapterY, child = 'chapterY.Rmd'}
+```
+
+\newpage
+
+```{r chapterZ, child = 'chapterZ.Rmd'}
+```
+
+\newpage
+
+```{r conclusions, child = 'conclusions.Rmd'}
+```
+
+
+\newpage
+\spacing{1.0} 
+
+```{r references, child = 'references.Rmd'}
+```
+
+
+\newpage
+
+```{r appendix, child = 'appendix.Rmd'}
+```
+
+
