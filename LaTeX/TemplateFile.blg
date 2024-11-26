@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TemplateFile.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: chicago.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: MyReferences.bib
+Warning--empty institution in bethlehem_article_2009
+Warning--no volume for rao_making_2020
+You've used 6 entries,
+            2861 wiz_defined-function locations,
+            651 strings with 6091 characters,
+and the built_in function-call counts, 3972 in all, are:
+= -- 327
+> -- 296
+< -- 0
++ -- 84
+- -- 92
+* -- 371
+:= -- 739
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 44
+chr.to.int$ -- 6
+cite$ -- 8
+duplicate$ -- 104
+empty$ -- 238
+format.name$ -- 108
+if$ -- 731
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 34
+num.names$ -- 60
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 80
+quote$ -- 0
+skip$ -- 104
+stack$ -- 0
+substring$ -- 205
+swap$ -- 31
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 110
+warning$ -- 2
+while$ -- 52
+width$ -- 0
+write$ -- 84
+(There were 2 warnings)
