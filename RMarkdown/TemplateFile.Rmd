@@ -21,7 +21,7 @@ bibliography: MyReferences.bib
 ---
 
 <!-- 
-TemplateFile.tex version 0.20 (10/2024), Maria Valaste
+TemplateFile.tex version 0.30 (02/2026), Maria Valaste
 Files: 
   - TemplateFile.Rmd - the master document
   - introduction.Rmd, chapterX.Rmd, chapterY.Rmd, chapterZ.Rmd, conclusions.Rmd, references.Rmd, appendix.Rmd - child files
@@ -44,7 +44,7 @@ https://studies.helsinki.fi/instructions/article/digital-accessibility-what-all-
 knitr::opts_chunk$set(echo = TRUE)
 options(tinytex.verbose = TRUE)
 ```
-<!-- change Bibliograpy->References -->
+<!-- change Bibliography->References -->
 \renewcommand\bibname{References} 
 
 
